@@ -1,0 +1,1183 @@
+html {
+  font-size: 62.5%;
+}
+:root {
+  --gap-bg-color: #333333;
+  --border-button-white: #003764;
+  --text-font-Lato: "Lato", sans-serif;
+  --text-font-Montserrat: "Montserrat", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* GAP HEADER */
+.logo-items img {
+  height: 38px;
+  width: auto;
+  margin: 0 0 -2px 0px;
+}
+.logo-items img:hover {
+  opacity: 0.5;
+}
+.gap-header {
+  font-family: var(--text-font-Montserrat);
+  font-size: 1.1rem;
+  background-color: var(--gap-bg-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gap-header-right {
+  display: flex;
+  font-size: 1.1rem;
+}
+.sign-in:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.shopping-bag:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+/* HEADER SEARCH */
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  z-index: 1;
+  /* z-index là phân loại từng tầng từng tầng */
+  display: flex;
+  justify-content: space-around;
+}
+.header ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+.header a {
+  font-family: var(--text-font-Lato);
+  color: var(--gap-bg-color);
+  font-size: 1.4rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: var(--gap-bg-color);
+  font-family: var(--text-font-Lato);
+  border-bottom: 2px solid var(--gap-bg-color);
+}
+/* HOVER */
+.content-hover {
+  display: flex;
+  font-size: 1.4rem;
+  font-family: var(--text-font-Montserrat);
+  justify-content: center;
+  padding: 20px;
+  gap: 50px;
+  line-height: 2.5rem;
+}
+.content-hover h1 {
+  border-bottom: 1px solid rgb(179, 179, 179);
+  margin: 20px 20px 20px 0;
+  font-weight: 700;
+}
+.header-hover {
+  display: none;
+  width: 100%;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.header {
+  position: relative;
+}
+.header li:not(:first-child) {
+  height: 100%;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.header li:not(:first-child):hover a {
+  font-weight: 900;
+  line-height: 3rem;
+  border-bottom: 2px solid #003764;
+  color: #003764;
+}
+.header ul li:not(:first-child).show .header-hover {
+  display: block;
+}
+/* .header ul li:not(:first-child):hover ~ .header-hover {
+    display: block;
+  } */
+/* /HOVER */
+.header2 {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  padding: 1px 0 0;
+  background-color: white;
+  z-index: 1;
+}
+.header2 {
+  display: none;
+}
+.header2 ul {
+  display: flex;
+  padding: 12px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search2 {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  height: 10vh;
+  padding: 0 20px;
+  margin: 0 -10px;
+}
+.search-left {
+  display: flex;
+}
+.search p {
+  font-size: 1.5rem;
+  overflow: hidden;
+  > span {
+    display: inline-block;
+    height: 1.5rem;
+    vertical-align: bottom;
+    animation: animatewords 8s infinite;
+  }
+}
+@keyframes animatewords {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(-45px);
+  }
+  100% {
+    transform: translateY(-60px);
+  }
+}
+/* MENU STYLE */
+.menu-style ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.menu-style a {
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-family: var(--text-font-Montserrat);
+  color: var(--gap-bg-color);
+}
+/* STYLE ON SALE */
+.style-on-sale {
+  position: relative;
+}
+.style-on-sale::after {
+  content: "";
+  background-image: url(../img/cozyme.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+/* FALL LOOKS GOODS */
+.fall-looks-goods {
+  display: none;
+  position: relative;
+}
+.fall-looks-goods img {
+  width: 100%;
+  height: auto;
+}
+.fall-looks-goods::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/falllooksgood.svg);
+}
+/* FALL DEAL RUSH */
+.fall-deal-rush h2 {
+  font-size: 2.2rem;
+  /* font-weight: 700; */
+  margin: 20px 0;
+}
+.fall-deal-rush {
+  text-align: center;
+  margin: 50px;
+  font-family: var(--text-font-Montserrat);
+  font-weight: 700;
+}
+.button-white {
+  border: 2px solid var(--border-button-white);
+  font-family: var(--text-font-Montserrat);
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: white;
+  color: var(--border-button-white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin: 0 10px;
+  min-width: 20rem;
+}
+/* img and button*/
+.shop {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(2, 48%);
+}
+.shop-sale img {
+  width: auto;
+  max-height: 330px;
+}
+.shop-sale {
+  position: relative;
+}
+.shop-sale::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+}
+.shop-sale:nth-child(1)::after {
+  background-image: url(../img/jeans-sale.svg);
+}
+.shop-sale:nth-child(2)::after {
+  background-image: url(../img/tops-sale.svg);
+}
+.menu-shop,
+.menu-shop-button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.menu-shop-button {
+  justify-content: center;
+  margin: 25px;
+}
+/*  */
+h3 {
+  font-family: var(--text-font-Montserrat);
+  letter-spacing: 1.4px;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  word-spacing: 0.2rem;
+  margin: 20px 0;
+}
+/* MIDDLE */
+/* scroll */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.gallery {
+  display: none;
+}
+.scroll {
+  display: flex;
+}
+.scroll.x {
+  max-width: 1440px;
+  height: auto;
+  overflow-y: hidden;
+}
+.x.proximity-scroll-snapping {
+  scroll-snap-type: x proximity;
+}
+.scroll > div {
+  scroll-snap-align: center;
+  flex: none;
+}
+.scroll.x ul {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(8, auto);
+  gap: 35px;
+  font-family: var(--text-font-Montserrat);
+  font-size: 1.3rem;
+  color: #5a5a5a;
+}
+.middle li {
+  max-width: 220px;
+  line-height: 1.5rem;
+}
+.middle img {
+  width: 250px;
+  height: 340px;
+}
+.middle .cost {
+  font-weight: 400;
+  margin-top: 10px;
+}
+.middle h4 {
+  color: #727272;
+}
+.cost-red {
+  color: red;
+}
+.best-seller {
+  position: relative;
+}
+.best-seller::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 37px;
+  bottom: 0.5rem;
+  left: 1.2rem;
+  background-image: url(https://oldnavy.gap.com/Asset_Archive/ONWeb/content/DPG/ONpod/E3/blue_badge/Best_Seller.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* /scroll */
+.middle img {
+  width: 220px;
+  height: 290px;
+}
+.middle ul {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+  font-family: var(--text-font-Montserrat);
+  font-size: 1.3rem;
+  color: #878787;
+  margin-bottom: 40px;
+}
+.middle li {
+  max-width: 220px;
+  line-height: 1.5rem;
+}
+
+.middle .cost {
+  font-weight: 400;
+  margin-top: 10px;
+}
+.middle h4 {
+  color: #727272;
+}
+.cost-red {
+  color: red;
+}
+.best-seller {
+  position: relative;
+}
+.best-seller::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 37px;
+  bottom: 0.5rem;
+  left: 1.2rem;
+  background-image: url(https://oldnavy.gap.com/Asset_Archive/ONWeb/content/DPG/ONpod/E3/blue_badge/Best_Seller.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* baby-sale */
+.menu-style .baby-sale {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+.kid-baby-sale {
+  position: relative;
+}
+.kid-baby-sale::after {
+  background-image: url(../img/style-from-$6.svg);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+/* shop baby */
+h5 {
+  font-weight: 900;
+  font-size: 2.1rem;
+  margin: 20px 0;
+  font-family: var(--text-font-Montserrat);
+}
+.shop-baby {
+  text-align: center;
+  margin: 30px 0px;
+}
+/* footer-up */
+.footer-up {
+  font-family: var(--text-font-Lato);
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgb(102, 102, 102);
+}
+.four-brands {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px 0;
+  align-items: center;
+}
+.content-brands {
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: var(--text-font-Montserrat);
+}
+.content-brands h1 {
+  font-size: 2.2rem;
+  line-height: 4.2rem;
+}
+.content-brands a {
+  text-decoration: underline;
+  padding-left: 5px;
+  color: rgb(102, 102, 102);
+}
+.logo-brands ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo-brands img {
+  height: auto;
+}
+.gap-footer {
+  width: 50px;
+}
+.oldnavy-footer,
+.BR-footer {
+  width: 90px;
+}
+.athleta-footer {
+  width: 120px;
+}
+/* footer */
+.footer {
+  border-top: solid 8px black;
+  display: grid;
+  height: auto;
+  grid-template-columns: 31% 38% 31%;
+}
+.footer-left {
+  display: flex;
+  padding: 30px;
+  /* justify-content: center; */
+  align-items: center;
+  border-right: solid 1px black;
+  text-align: center;
+}
+.left {
+  font-size: 1.4rem;
+  font-family: var(--text-font-Montserrat);
+}
+.text-left p {
+  text-align: start;
+}
+.text-left h1 {
+  text-align: start;
+  padding: 10px 0;
+  font-size: 2rem;
+}
+/*  */
+form {
+  padding: 20px 0;
+}
+.email,
+.mobile {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.left button,
+.middle button {
+  min-width: 100px;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 14px 22px;
+  color: white;
+  background-color: #003764;
+}
+/* footer-middle */
+.footer-middle {
+  display: flex;
+  justify-content: center;
+  border-right: solid 1px black;
+  text-align: center;
+  padding: 20px;
+}
+.mobile-midddle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middle input {
+  width: 160px;
+}
+.middle button {
+  background-color: black;
+  height: 50px;
+  margin: 8px 15px 0;
+}
+.middle p {
+  font-family: var(--text-font-Montserrat);
+  letter-spacing: 0.6px;
+  line-height: 1.2rem;
+  color: #686473;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img4030 {
+  display: none;
+}
+.img30off {
+  display: none;
+}
+.footer-middle-up {
+  display: none;
+}
+.extra4030off {
+  display: none;
+}
+.fall-looks-goods img:nth-child(2) {
+  display: none;
+}
+/* Jeans and jacket */
+.first {
+  font-family: var(--text-font-Montserrat);
+  margin: 30px;
+  color: rgb(102, 102, 102);
+  font-size: 1.4rem;
+}
+.jean-jacket {
+  display: flex;
+  /* align-items: center; */
+  margin: 0 20px;
+}
+.img-jean-jacket img {
+  width: 370px;
+  height: auto;
+  margin: 10px 10px 0 0;
+}
+
+.img-jean-jacket {
+  width: 70%;
+  margin: 0 auto;
+}
+.content-jean-jacket {
+  width: 35%;
+}
+.content-jean-jacket .shoppers {
+  display: flex;
+  width: 90%;
+  background-color: #f2f2f2;
+  padding: 10px 20px;
+}
+.content-jean-jacket p {
+  color: #4e4e4e;
+  font-size: 1.4rem;
+  font-family: var(--text-font-Montserrat);
+}
+.content-jean-jacket .title {
+  font-size: 3.4rem;
+  line-height: 3.2rem;
+  font-weight: 100;
+  margin: 20px 0;
+}
+.baby-kids {
+  display: none;
+}
+/* RESPONSIVE */
+/* */
+@media screen and (min-width: 1021px) and (max-width: 1160px) {
+  .container {
+    max-width: 900px;
+  }
+  /* header */
+  .header ul {
+    gap: 25px;
+  }
+  /* MENU SHOP */
+  .menu-shop-button .button-white {
+    min-width: 18rem;
+  }
+  .shop-sale img {
+    max-height: 278px;
+  }
+}
+/*  */
+@media screen and (min-width: 981px) and (max-width: 1020px) {
+  .container {
+    max-width: 900px;
+  }
+  /* gap header */
+  .gap-header p {
+    font-size: 1rem;
+  }
+  .gap-header-right p {
+    display: block;
+  }
+  /* header */
+  .header ul {
+    gap: 17px;
+  }
+  .header a {
+    font-size: 1.3rem;
+  }
+  /* MENU SHOP */
+  .menu-shop-button .button-white {
+    min-width: 18rem;
+  }
+  .shop-sale img {
+    max-height: 266px;
+  }
+}
+/*  */
+@media screen and (min-width: 781px) and (max-width: 980px) {
+  .container {
+    max-width: 800px;
+  }
+  .gap-header-right,
+  .gap-header p {
+    display: none;
+  }
+  .gap-header {
+    justify-content: center;
+  }
+  .menu-style a {
+    font-size: 1.1rem;
+  }
+  .img4030 {
+    display: block;
+  }
+  .img60 {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .header2 {
+    display: block;
+  }
+  .img30off {
+    display: block;
+  }
+  .img75 {
+    display: none;
+  }
+  #menu-style2 {
+    display: none;
+  }
+  .slay-tember-sale {
+    display: none;
+  }
+  .style-on-sale {
+    display: none;
+  }
+  .fall-looks-goods {
+    display: block;
+  }
+  .fall-deal-rush h2,
+  h5 {
+    font-size: 1.4rem;
+  }
+  .button-white {
+    font-size: 1.1rem;
+    min-width: 16rem;
+    padding: 12px;
+  }
+  .shop-sale img {
+    max-height: 216px;
+  }
+  .menu-shop-button button {
+    min-width: 13rem;
+    font-size: 1rem;
+    margin: -10px 10px;
+    padding: 9px 7px;
+  }
+  .middle p {
+    font-size: 1.2rem;
+  }
+  .middle h4 {
+    font-size: 1.3rem;
+  }
+  .content-brands {
+    display: none;
+  }
+  .text-left h1 {
+    font-size: 1.5rem;
+  }
+  .text-left p {
+    font-size: 1.1rem;
+  }
+  input {
+    width: 220px;
+  }
+  label {
+    font-size: 1.4rem;
+  }
+  .footer-middle p {
+    display: none;
+  }
+  .footer-middle .middle img {
+    width: 240px;
+  }
+  .mobile-midddle img {
+    width: 22px;
+  }
+  .middle button {
+    padding: 10px 10px;
+  }
+  .footer {
+    display: block;
+  }
+  .footer-left {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .footer-left,
+  .footer-middle,
+  .right,
+  .footer-middle-up {
+    border-top: 1px solid black;
+    border-right: none;
+  }
+  .footer-middle .middle {
+    display: none;
+  }
+  .footer-middle-up {
+    display: block;
+  }
+  .container-menu {
+    display: none;
+  }
+  .gallery {
+    display: block;
+  }
+}
+/*  */
+@media screen and (min-width: 651px) and (max-width: 780px) {
+  .container {
+    max-width: 800px;
+  }
+  .gap-header-right,
+  .gap-header p {
+    display: none;
+  }
+  .gap-header {
+    justify-content: center;
+  }
+  .menu-style a {
+    font-size: 1rem;
+  }
+  .img4030 {
+    display: block;
+  }
+  .img60 {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .header2 {
+    display: block;
+  }
+  .img30off {
+    display: block;
+  }
+  .img75 {
+    display: none;
+  }
+  #menu-style2 {
+    display: none;
+  }
+  #search2 {
+    width: 550px;
+  }
+  .menu-style .baby-sale {
+    gap: 40px;
+  }
+  .slay-tember-sale {
+    display: none;
+  }
+  .style-on-sale {
+    display: none;
+  }
+  .fall-looks-goods {
+    display: block;
+  }
+  .fall-deal-rush h2,
+  h5 {
+    font-size: 1.4rem;
+  }
+  .button-white {
+    font-size: 1.1rem;
+    min-width: 16rem;
+    padding: 12px;
+  }
+  .shop-sale img {
+    max-height: 175px;
+  }
+  .menu-shop-button button {
+    min-width: 10rem;
+    font-size: 0.8rem;
+    margin: -10px 8px;
+    padding: 9px 6px;
+  }
+  .middle p {
+    font-size: 1.2rem;
+  }
+  .middle h4 {
+    font-size: 1.3rem;
+  }
+  .content-brands {
+    display: none;
+  }
+  .text-left h1 {
+    font-size: 1.5rem;
+  }
+  .text-left p {
+    font-size: 1.1rem;
+  }
+  input {
+    width: 220px;
+  }
+  label {
+    font-size: 1.4rem;
+  }
+  .footer-middle p {
+    display: none;
+  }
+  .footer-middle .middle img {
+    width: 240px;
+  }
+  .mobile-midddle img {
+    width: 22px;
+  }
+  .middle button {
+    padding: 10px 10px;
+  }
+  .footer {
+    display: block;
+  }
+  .footer-left {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .footer-left,
+  .footer-middle,
+  .right,
+  .footer-middle-up {
+    border-top: 1px solid black;
+    border-right: none;
+  }
+  .footer-middle .middle {
+    display: none;
+  }
+  .footer-middle-up {
+    display: block;
+  }
+  .container-menu {
+    display: none;
+  }
+  .gallery {
+    display: block;
+  }
+}
+/*  */
+@media screen and (min-width: 501px) and (max-width: 650px) {
+  .img60 {
+    display: none;
+  }
+  .extra4030off {
+    display: block;
+  }
+  .gap-header-right,
+  .gap-header p {
+    display: none;
+  }
+  .gap-header {
+    justify-content: center;
+  }
+  .header {
+    display: none;
+  }
+  .header2 {
+    display: block;
+  }
+  #search2 {
+    width: 400px;
+  }
+  .img75 {
+    display: none;
+  }
+  .menu-style {
+    display: none;
+  }
+  .img30off {
+    display: block;
+  }
+  .style-on-sale {
+    display: none;
+  }
+  .fall-looks-goods {
+    display: block;
+  }
+  .slay-tember-sale {
+    display: none;
+  }
+  .button-white {
+    padding: 15px 0;
+    font-size: 1.4rem;
+    margin: 3px 0px;
+    min-width: 95%;
+  }
+  h5 {
+    font-size: 1.6rem;
+  }
+  .content-brands {
+    display: none;
+  }
+  .footer {
+    display: block;
+  }
+  .footer-left {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .footer-left,
+  .footer-middle,
+  .right,
+  .footer-middle-up {
+    border-top: 1px solid black;
+    border-right: none;
+  }
+  .footer-middle .middle {
+    display: none;
+  }
+  .footer-middle-up {
+    display: block;
+  }
+  .fall-deal-rush h2 {
+    font-size: 1.8rem;
+  }
+  .fall-looks-goods img:nth-child(1) {
+    display: none;
+  }
+  .fall-looks-goods img:nth-child(2) {
+    display: block;
+  }
+  .fall-looks-goods::after {
+    background-image: url(../img/falllookgoods500.svg);
+  }
+  .shop-first-img {
+    display: none;
+  }
+  .shop {
+    display: flex;
+  }
+  .menu-shop-button button {
+    margin: -7px 0;
+  }
+  .shop-sale img {
+    max-height: 300px;
+  }
+  .container-menu {
+    display: none;
+  }
+  .gallery {
+    display: block;
+  }
+  .kid-baby-sale {
+    display: none;
+  }
+  .baby-kids {
+    display: block;
+  }
+}
+/*  */
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  .img60 {
+    display: none;
+  }
+  .extra4030off {
+    display: block;
+  }
+  .gap-header-right,
+  .gap-header p {
+    display: none;
+  }
+  .gap-header {
+    justify-content: center;
+  }
+  .header {
+    display: none;
+  }
+  .header2 {
+    display: block;
+  }
+  .search-left {
+    display: none;
+  }
+  #search2 {
+    width: auto;
+    border: none;
+  }
+  .img75 {
+    display: none;
+  }
+  .menu-style {
+    display: none;
+  }
+  .img30off {
+    display: block;
+  }
+  .style-on-sale {
+    display: none;
+  }
+  .fall-looks-goods {
+    display: block;
+  }
+  .slay-tember-sale {
+    display: none;
+  }
+  .button-white {
+    padding: 15px 0;
+    font-size: 1.4rem;
+    margin: 3px 0px;
+    min-width: 95%;
+  }
+  h5 {
+    font-size: 1.6rem;
+  }
+  .content-brands {
+    display: none;
+  }
+  .footer {
+    display: block;
+  }
+  .footer-left {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .footer-left,
+  .footer-middle,
+  .right,
+  .footer-middle-up {
+    border-top: 1px solid black;
+    border-right: none;
+  }
+  .footer-middle .middle {
+    display: none;
+  }
+  .footer-middle-up {
+    display: block;
+  }
+  .fall-deal-rush h2 {
+    font-size: 1.8rem;
+  }
+  .fall-looks-goods img:nth-child(1) {
+    display: none;
+  }
+  .fall-looks-goods img:nth-child(2) {
+    display: block;
+  }
+  .fall-looks-goods::after {
+    background-image: url(../img/falllookgoods500.svg);
+  }
+  .shop-first-img {
+    display: none;
+  }
+  .shop {
+    display: flex;
+  }
+  .menu-shop-button button {
+    margin: -7px 0;
+  }
+  .shop-sale img {
+    max-height: 206px;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .kid-baby-sale {
+    display: none;
+  }
+  .container-menu {
+    display: none;
+  }
+  .baby-kids {
+    display: block;
+  }
+  .gallery {
+    display: block;
+  }
+  .gap-footer {
+    width: 40px;
+  }
+  .oldnavy-footer,
+  .BR-footer {
+    width: 65px;
+  }
+  .athleta-footer {
+    width: 85px;
+  }
+}
